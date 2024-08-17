@@ -41,19 +41,16 @@ export const Nav = () => {
       <Container>
         <Box>
           <Flex my={"6"} display={{ base: "none", md: "flex" }}>
-            <Avatar name="Ozioma Agaecheta" src="/assets/me2.jpeg" />
+            <Avatar 
+              name="Ozioma Agaecheta" 
+              src="/assets/me2.jpeg" 
+              size={"sm"}
+              style={{ border: "2px solid #A47148" }}
+            
+            />
 
             <Spacer />
-            {/*             
-            <Flex gap='4' justifyContent="end">
-              {navMenuLinks.map((link) => (
-                <Link key={link.href} href={link.href}>
-                  <Button  style={{ border:"none", borderColor:"none" }} leftIcon={<FontAwesomeIcon icon={link.icon} style={{ color:"A47148" }} />} variant="outline" colorScheme="brown" size="md">
-                    <Text color={"white"} fontWeight={'light'} fontSize={'lg'}>{link.name}</Text>
-                  </Button>
-                </Link>
-              ))}
-            </Flex> */}
+            
             <Flex gap="4" justifyContent="end">
               {navMenuLinks.map((link) => (
                 <Link key={link.href} href={link.href}>
@@ -69,7 +66,7 @@ export const Nav = () => {
                         size="xs"
                         style={{ color: "A47148", marginRight: "8px" }}
                       />
-                      <Text color="white" fontWeight="light" fontSize="lg">
+                      <Text color="white" fontWeight="light" fontSize="sm">
                         {link.name}
                       </Text>
                     </Flex>
