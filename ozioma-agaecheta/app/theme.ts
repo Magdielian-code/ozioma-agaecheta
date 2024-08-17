@@ -1,5 +1,6 @@
 // theme.ts
 import { extendTheme, ThemeConfig } from '@chakra-ui/react'
+import { color } from 'framer-motion'
 
 const config: ThemeConfig = {
     initialColorMode: 'light',
@@ -7,17 +8,17 @@ const config: ThemeConfig = {
 }
 
 const colors = {
-    primary: {
-        50: '#E3F2F9',
-        100: '#C5E4F3',
-        200: '#A2D4EC',
-        300: '#7AC1E4',
-        400: '#47A9DA',
-        500: '#0088CC', // Default
-        600: '#007AB8',
-        700: '#005885',
-        800: '#003F5E',
-        900: '#002A3B',
+    brown: {
+        50: '#FFEDD8',
+        100: '#F3D5B5',
+        200: '#E7BC91',
+        300: '#D4A276',
+        400: '#BC8A5F',
+        500: '#A47148', // Default
+        600: '#8B5E34',
+        700: '#6F4518',
+        800: '#603808',
+        900: '#583101',
     },
     secondary: {
         50: '#FEEBC8',
@@ -46,17 +47,18 @@ const Button = {
     },
     variants: {
         solid: {
-            bg: 'primary.500', // Default background color
+            bg: 'brown.900', // Default background color
             color: 'white',
             _hover: {
-                bg: 'primary.600', // Hover variant
+                bg: 'brown.600', // Hover variant
             },
         },
         outline: {
-            borderColor: 'primary.500',
-            color: 'primary.500',
+            // borderColor: 'brown.500',
+            color: 'black',
             _hover: {
-                bg: 'primary.50',
+                bg: 'brown.800',
+                color: 'white',
             },
         },
     },
