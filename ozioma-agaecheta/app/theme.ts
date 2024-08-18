@@ -7,6 +7,18 @@ const config: ThemeConfig = {
     useSystemColorMode: true,
 }
 
+const globals = {
+    body: {
+        bg: '#1D1817',
+        color: 'white',
+    }
+}
+
+const fonts = {
+    heading: `'Open Sans', 'sans-serif'`,
+    body: `'Raleway', 'sans-serif'`,
+}   
+
 const colors = {
     brown: {
         50: '#FFEDD8',
@@ -70,6 +82,8 @@ const Button = {
 const theme = extendTheme({
     config,
     colors,
+    fonts,
+    globals,
     components: {
         Button, // Apply the Button customizations
     },

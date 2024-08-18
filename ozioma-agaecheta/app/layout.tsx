@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Providers } from "./providers";
 import { Nav } from "components/Nav";
+import Hero from "@/components/Hero";
 
 
 export const metadata: Metadata = {
@@ -17,9 +18,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body  className="relative bg-[#1D1817]">
+      <body  className="relative bg-[#1D1817]" color="white">
         <Providers>
           <Nav/>
+          <Hero/>
         </Providers>
       </body>
     </html>
