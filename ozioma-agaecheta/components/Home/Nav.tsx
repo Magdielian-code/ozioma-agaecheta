@@ -8,7 +8,9 @@ import {
   faDiagramProject,
   faAddressBook,
 } from "@fortawesome/free-solid-svg-icons";
+
 import Container from "@/components/Container";
+
 import {
   Avatar,
   Box,
@@ -20,6 +22,9 @@ import {
   Text,
 } from "@chakra-ui/react";
 
+import React from "react";
+import { useScrollDirection } from "@/hooks/useScrollDirection";
+
 const navMenuLinks = [
   { name: "Home", href: "/", icon: faHouse },
   { name: "Talks", href: "/talks", icon: faMicrophone },
@@ -28,16 +33,21 @@ const navMenuLinks = [
   { name: "Consulting", href: "/consulting", icon: faAddressBook },
 ];
 
-export const Nav = () => {
+export const Nav: React.FC = () => {
+
+  const scrollDirection = useScrollDirection();
+
   return (
     <Box
       w={"100%"}
-      zIndex={1}
+      zIndex={2}
       bg={'#1D1817'}
       position={{ base: "fixed", md: "relative" }}
       bottom={"0"}
       left={"0"}
       borderTop={{ base: "0.5px solid #E2E8F0", md: "none" }}
+      transform={scrollDirection === "down" ? "translateY(100%)" : "translateY(0)"}
+      transition="transform 0.3s"
     >
       <Container>
         <Box>

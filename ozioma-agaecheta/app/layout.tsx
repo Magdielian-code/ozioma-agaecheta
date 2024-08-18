@@ -4,7 +4,9 @@ import "./globals.css";
 import { Providers } from "./providers";
 import { Nav } from "components/Home/Nav";
 import Hero from "@/components/Home/Hero";
-
+import About from "@/components/Home/About";
+ 
+import React from "react";
 
 export const metadata: Metadata = {
   title: "Ozioma Agaecheta",
@@ -22,8 +24,11 @@ export default function RootLayout({
         <Providers>
           <Nav/>
           <Hero/>
+          <About/>
         </Providers>
       </body>
     </html>
   );
 }
+
+
