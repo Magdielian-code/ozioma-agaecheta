@@ -38,14 +38,15 @@ export const Nav: React.FC = () => {
 
   return (
     <Box
-      w={"100%"}
-      zIndex={2}
-      bg={"#1D1817"}
-      position={{ base: "fixed", md: "relative" }}
-      bottom={"0"}
-      left={"0"}
-      borderTop={{ base: "0.5px solid #E2E8F0", md: "none" }}
-    >
+    w={"100%"}
+    zIndex={2}
+    bg={"#1D1817"}
+    position={{ base: "fixed", md: "relative" }}
+    bottom={{ base: scrollDirection === "down" ? "-100%" : "0", md: "auto" }}
+    left={"0"}
+    borderTop={{ base: "0.5px solid #E2E8F0", md: "none" }}
+    transition="bottom 0.3s"
+  >
       <Container>
         <Box>
           <Flex

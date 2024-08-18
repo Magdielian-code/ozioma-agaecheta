@@ -1,3 +1,5 @@
+// hooks/useScrollDirection.ts
+
 import { useState, useEffect } from 'react';
 
 export function useScrollDirection() {
@@ -15,9 +17,15 @@ export function useScrollDirection() {
       lastScrollY = scrollY > 0 ? scrollY : 0;
     };
 
-    window.addEventListener("scroll", updateScrollDirection);
+    const handleScroll = () => {
+      if (window.innerWidth < 768) { // Only track scroll on mobile
+        updateScrollDirection();
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener("scroll", updateScrollDirection);
+      window.removeEventListener("scroll", handleScroll);
     }
   }, [scrollDirection]);
 
