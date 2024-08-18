@@ -34,24 +34,25 @@ const navMenuLinks = [
 ];
 
 export const Nav: React.FC = () => {
-
   const scrollDirection = useScrollDirection();
 
   return (
     <Box
       w={"100%"}
       zIndex={2}
-      bg={'#1D1817'}
+      bg={"#1D1817"}
       position={{ base: "fixed", md: "relative" }}
       bottom={"0"}
       left={"0"}
       borderTop={{ base: "0.5px solid #E2E8F0", md: "none" }}
-      transform={scrollDirection === "down" ? "translateY(100%)" : "translateY(0)"}
-      transition="transform 0.3s"
     >
       <Container>
         <Box>
-          <Flex align={"center"} my={"6"} display={{ base: "none", md: "flex" }}>
+          <Flex
+            align={"center"}
+            my={"6"}
+            display={{ base: "none", md: "flex" }}
+          >
             <Avatar
               name="Ozioma Agaecheta"
               src="/assets/me2.jpeg"
@@ -102,11 +103,13 @@ export const Nav: React.FC = () => {
                 key={link.href}
                 href={link.href}
               >
-                <Icon as={FontAwesomeIcon} icon={link.icon} boxSize={4} style={{ color:"#E7BC91"}} />
-                <Text 
-                  color="white"
-                  fontSize="xs"
-                >
+                <Icon
+                  as={FontAwesomeIcon}
+                  icon={link.icon}
+                  boxSize={4}
+                  style={{ color: "#E7BC91" }}
+                />
+                <Text color="white" fontSize="xs">
                   {link.name}
                 </Text>
               </Link>
