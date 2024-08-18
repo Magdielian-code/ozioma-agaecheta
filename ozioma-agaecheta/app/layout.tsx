@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Providers } from "./providers";
-import { Nav } from "components/Nav";
-import Hero from "@/components/Hero";
+import { Nav } from "components/Home/Nav";
+import Hero from "@/components/Home/Hero";
 
 
 export const metadata: Metadata = {

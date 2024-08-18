@@ -8,7 +8,7 @@ import {
   faDiagramProject,
   faAddressBook,
 } from "@fortawesome/free-solid-svg-icons";
-import Container from "./Container";
+import Container from "@/components/Container";
 import {
   Avatar,
   Box,
