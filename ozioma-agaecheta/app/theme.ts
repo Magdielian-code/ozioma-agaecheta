@@ -16,7 +16,7 @@ const globals = {
 
 const fonts = {
     heading: `'Open Sans', 'sans-serif'`,
-    body: `'Raleway', 'sans-serif'`,
+    body: `'sans-serif'`,
 }   
 
 const colors = {
