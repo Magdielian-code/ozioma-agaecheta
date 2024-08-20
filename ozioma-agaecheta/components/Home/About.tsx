@@ -3,7 +3,7 @@
 import { Box, Flex, Spacer, Image } from '@chakra-ui/react';
 import React from 'react';
 import Container from "@/components/Container";
-import Socials from '@/components/Socials/Socials';
+import Socials from '@/components/Utils/Socials';
 
 
 const About = () => {

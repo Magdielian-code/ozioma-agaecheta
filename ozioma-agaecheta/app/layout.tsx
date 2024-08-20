@@ -7,6 +7,7 @@ import Hero from "@/components/Home/Hero";
 import About from "@/components/Home/About";
  
 import React from "react";
+import Skillset from "@/components/Home/Skillset";
 
 export const metadata: Metadata = {
   title: "Ozioma Agaecheta",
@@ -25,6 +26,7 @@ export default function RootLayout({
           <Nav/>
           <Hero/>
           <About/>
+          <Skillset/>
         </Providers>
       </body>
     </html>
