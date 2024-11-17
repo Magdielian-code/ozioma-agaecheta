@@ -28,13 +28,13 @@ const Skillset = () => {
   return (
     <Container>
       <Tabs mt={40} variant={"enclosed"}>
-        <TabList>
+        <TabList borderBottomColor={"transparent"}>
           {categories.map((category) => (
             <Tab key={category.name}>{category.name}</Tab>
           ))}
         </TabList>
 
-        <TabPanels>
+        <TabPanels pt={10}>
           {categories.map((category) => (
             <TabPanel key={category.name}>
               <Grid
