@@ -24,7 +24,7 @@ const About = () => {
       </Box>
       <Box as='div' maxW={{ base:'100%', md:'60%'}} className="py-8 lg:p-0 lg:pl-40">
         <Box as='div'  className="text-lg/8 lg:text-xl/10">
-        With over 3 years of experience dedicated to learning and creating
+        With over 4 years of experience dedicated to learning and creating
         professional and brand-focused software and online solutions in
         diverse environments aimed at enhancing brand's online presence.
         </Box>

@@ -1,4 +1,5 @@
 "use client";
+
 import Home from "@/app/page";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -38,22 +39,19 @@ export const Nav: React.FC = () => {
 
   return (
     <Box
-    w={"100%"}
-    zIndex={2}
-    bg={"#1D1817"}
-    position={{ base: "fixed", md: "relative" }}
-    bottom={{ base: scrollDirection === "down" ? "-100%" : "0", md: "auto" }}
-    left={"0"}
-    borderTop={{ base: "0.5px solid #E2E8F0", md: "none" }}
-    transition="bottom 0.3s"
-  >
+      w={"100%"}
+      top={0}
+      zIndex={1000}
+      bg={"#1c1917"}
+      position={{ base: "fixed", md: "fixed" }}
+      bottom={{ base: scrollDirection === "down" ? "-100%" : "0", md: "auto" }}
+      left={"0"}
+      borderTop={{ base: "0.5px solid #E2E8F0", md: "none" }}
+      transition="bottom 0.3s"
+    >
       <Container>
         <Box>
-          <Flex
-            align={"center"}
-            my={"6"}
-            display={{ base: "none", md: "flex" }}
-          >
+          <Flex align={"center"} display={{ base: "none", md: "flex" }}>
             <Avatar
               name="Ozioma Agaecheta"
               src="/assets/me2.jpeg"
@@ -69,16 +67,39 @@ export const Nav: React.FC = () => {
                   <Button
                     style={{ border: "none" }}
                     variant="outline"
-                    colorScheme="brown"
+                    bg="transparent"
+                    _hover={{ 
+                      fontWeight: 'bold',
+                      bg: "#E7BC91", 
+                      color: "#000000",
+                      "& svg": { color: "#000000" },
+                      "& span": { color: "#000000" } // Target the text span
+                    }}
+                    _selected={{ 
+                      fontWeight: 'bold',
+                      bg: "#E7BC91", 
+                      color: "#000000",
+                      "& svg": { color: "#000000" },
+                      "& span": { color: "#000000" } // Target the text span
+                    }}
                     size="md"
                   >
                     <Flex align="center">
                       <FontAwesomeIcon
                         icon={link.icon}
                         size="xs"
-                        style={{ color: "#E7BC91", marginRight: "8px" }}
+                        style={{ 
+                          color: "#E7BC91", 
+                          marginRight: "8px",
+                          transition: "color 0.3s ease"
+                        }}
                       />
-                      <Text color="white" fontWeight="light" fontSize="sm">
+                      <Text 
+                        as="span"
+                        color="white" 
+                        fontWeight="light" 
+                        fontSize="sm"
+                      >
                         {link.name}
                       </Text>
                     </Flex>
@@ -103,12 +124,16 @@ export const Nav: React.FC = () => {
                 flexDirection={"column"}
                 key={link.href}
                 href={link.href}
+                _hover={{
+                  "& svg": { color: "#000000" },
+                  "& p": { color: "#E7BC91" }
+                }}
               >
                 <Icon
                   as={FontAwesomeIcon}
                   icon={link.icon}
                   boxSize={4}
-                  style={{ color: "#E7BC91" }}
+                  style={{ color: "#E7BC91", transition: "color 0.3s ease" }}
                 />
                 <Text color="white" fontSize="xs">
                   {link.name}
