@@ -77,7 +77,7 @@ const Projects = () => {
             </Text>
             <Text fontSize="md">
               Created to combat the rising tide of counterfeit goods and ensure
-              regulatory compliance, we're bringing transparency and trust to
+              regulatory compliance, we&apos;re bringing transparency and trust to
               markets worldwide.
             </Text>
             <Flex align="center" mt={5} flexWrap={"wrap"} gap={3}>

@@ -30,11 +30,11 @@ const Hero = () => {
           mt={1}
           fontFamily="sans-serif"
           color="brown.200"
-          fontSize={{ base: "20px", md: "50px", lg: "55px" }}
+          fontSize={{ base: "20px", md: "25px", lg: "45px" }}
           fontWeight={{ base: "light", md: "bold" }}
           textAlign="left"
         >
-          Full Stack &amp; Web3 Engineer
+          Full-Stack Software Engineer, International Conference Speaker &amp; Leader.
         </Heading>
         <Text
           fontSize={{ base: "lg", md: "35px" }}

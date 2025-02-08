@@ -1,5 +1,6 @@
 // theme.ts
 import { extendTheme, ThemeConfig } from "@chakra-ui/react";
+import "@fontsource/montserrat";
 import { color } from "framer-motion";
 
 const config: ThemeConfig = {
@@ -62,7 +63,8 @@ const Button = {
       bg: "brown.900", // Default background color
       color: "white",
       _hover: {
-        bg: "brown.600", // Hover variant
+        bg: "#E7BC91", // Hover variant
+        color: "#000000"
       },
     },
     outline: {
@@ -82,7 +84,10 @@ const Button = {
 const theme = extendTheme({
   config,
   colors,
-  fonts,
+  fonts: {
+    heading: `'montserrat', 'Open Sans', 'sans-serif'`,
+    body: `'montserrat', 'sans-serif'`,
+  },
   globals,
   components: {
     Tabs: {
@@ -98,7 +103,6 @@ const theme = extendTheme({
               borderColor: "brown.200",
               fontWeight: "bold",
             },
-            
           },
         },
       },

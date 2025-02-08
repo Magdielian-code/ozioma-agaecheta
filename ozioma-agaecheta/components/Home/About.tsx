@@ -26,7 +26,7 @@ const About = () => {
         <Box as='div'  className="text-lg/8 lg:text-xl/10">
         With over 4 years of experience dedicated to learning and creating
         professional and brand-focused software and online solutions in
-        diverse environments aimed at enhancing brand's online presence.
+        diverse environments aimed at enhancing brand&apos;s online presence.
         </Box>
         <Socials/>
       </Box>

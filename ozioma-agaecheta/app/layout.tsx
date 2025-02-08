@@ -1,18 +1,20 @@
+import { Nav } from "components/Home/Nav";
+import { Montserrat } from 'next/font/google'
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import { Providers } from "./providers";
-import { Nav } from "components/Home/Nav";
-import Hero from "@/components/Home/Hero";
-import About from "@/components/Home/About";
  
+import Footer from "@/components/Home/Footer";
 import React from "react";
-import Skillset from "@/components/Home/Skillset";
 
 export const metadata: Metadata = {
   title: "Ozioma Agaecheta",
   description: "Personal website",
 };
+
+const montserrat = Montserrat({
+  subsets: ['latin'],
+})
 
 export default function RootLayout({
   children,
@@ -20,13 +22,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body  className="relative bg-[#1D1817]" color="white">
+    <html lang="en" className={montserrat.className}>
+      <body  className="relative bg-[#1c1917]" color="white">
         <Providers>
           <Nav/>
-          <Hero/>
-          <About/>
-          <Skillset/>
+          {children}
+          <Footer/>
         </Providers>
       </body>
     </html>
