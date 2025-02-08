@@ -3,9 +3,14 @@ import { Montserrat } from 'next/font/google'
 import type { Metadata } from "next";
 import "./globals.css";
 import { Providers } from "./providers";
- 
+
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import { config } from "@fortawesome/fontawesome-svg-core";
+
 import Footer from "@/components/Home/Footer";
 import React from "react";
+
+config.autoAddCss = false;
 
 export const metadata: Metadata = {
   title: "Ozioma Agaecheta",

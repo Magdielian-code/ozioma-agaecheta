@@ -2,22 +2,24 @@ import { Box, Button, Flex, Spacer, Text } from "@chakra-ui/react";
 import Container from "@/components/Container";
 import React from "react";
 import Image from "next/image";
-import { SiLinkedin, SiX, SiGmail } from "@icons-pack/react-simple-icons";
+
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faLinkedin, faXTwitter, faGoogle } from '@fortawesome/free-brands-svg-icons'
 import Link from "next/link";
 
 export const p_socials = [
   {
     href: "https://www.linkedin.com/showcase/advoscholar/about/?viewAsMember=true",
-    icon: SiLinkedin,
+    icon: faLinkedin,
   },
-
   {
     href: "https://x.com/advoscholar_jil",
-    icon: SiX,
+    icon: faXTwitter,
   },
   {
     href: "mailto:advoscholar.jil@gmail.com",
-    icon: SiGmail,
+    icon: faGoogle,
   },
 ];
 
@@ -51,9 +53,10 @@ const Projects = () => {
             <Flex align="center" mt={10}>
               {p_socials.map((social, index) => (
                 <Link key={index} href={social.href} passHref>
-                  <social.icon
-                    size={17}
-                    style={{ marginRight: "20" }}
+                  <FontAwesomeIcon
+                    icon={social.icon}
+                    size="1x"
+                    style={{ marginRight: "20px" }}
                     color="white"
                   />
                 </Link>
@@ -97,9 +100,10 @@ const Projects = () => {
             <Flex align="center" mt={10}>
               {p_socials.map((social, index) => (
                 <Link key={index} href={social.href} passHref>
-                  <social.icon
-                    size={17}
-                    style={{ marginRight: "20" }}
+                  <FontAwesomeIcon
+                    icon={social.icon}
+                    size="1x"
+                    style={{ marginRight: "20px" }}
                     color="white"
                   />
                 </Link>
