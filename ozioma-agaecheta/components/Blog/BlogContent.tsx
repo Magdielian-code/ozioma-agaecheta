@@ -2,13 +2,13 @@
 import React, { useState, useEffect } from "react";
 import {
   GridItem,
-  TabPanels,
-  TabPanel,
   Skeleton,
-  Divider,
   SimpleGrid,
   Text,
 } from "@chakra-ui/react";
+import {
+  Tabskra-ui/tabs";
+
 import Image from "next/image";
 import Link from "next/link";
 import { BlogCard, TheoCard, LifestyleCard } from "./BlogCards";

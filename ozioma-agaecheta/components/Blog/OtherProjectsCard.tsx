@@ -1,26 +1,25 @@
 import React from "react";
-import { 
-  Card, 
-  CardHeader, 
-  Heading, 
-  CardBody, 
-  Stack, 
-  StackDivider, 
-  Box, 
-  Text 
+import {
+  Heading,
+  Box,
+  Text,
+  Separator
 } from "@chakra-ui/react";
+import { Card } from "@chakra-ui/react";
+import { Stack } from "@chakra-ui/react";
 import Link from "next/link";
 import { OTHER_PROJECTS } from "./BlogConstants";
 
 const OtherProjectsCard: React.FC = () => (
-  <Card bg="#1c1917" color="#ffffff">
-    <CardHeader>
+  <Card.Root bg="#1c1917" color="#ffffff">
+    <Card.Header>
       <Heading size="md">Other Projects</Heading>
-    </CardHeader>
-    <CardBody>
-      <Stack divider={<StackDivider />} spacing="4">
+    </Card.Header>
+    <Card.Body>
+      <Stack gap="4">
         {OTHER_PROJECTS.map((project, index) => (
           <Box key={index}>
+            <Separator />
             <Link href={project.link}>
               {project.title}
             </Link>
@@ -30,8 +29,8 @@ const OtherProjectsCard: React.FC = () => (
           </Box>
         ))}
       </Stack>
-    </CardBody>
-  </Card>
+    </Card.Body>
+  </Card.Root>
 );
 
 export default OtherProjectsCard;

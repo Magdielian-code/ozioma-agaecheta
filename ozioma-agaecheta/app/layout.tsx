@@ -1,14 +1,12 @@
 import { Nav } from "components/Home/Nav";
+import Footer from "@/components/Home/Footer";
 import { Montserrat } from 'next/font/google'
 import type { Metadata } from "next";
 import "./globals.css";
-import { Providers } from "./providers";
 
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
-
-import Footer from "@/components/Home/Footer";
-import React from "react";
+import { Provider } from "@/components/ui/provider";
 
 config.autoAddCss = false;
 
@@ -27,16 +25,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={montserrat.className}>
-      <body  className="relative bg-[#1c1917]" color="white">
-        <Providers>
-          <Nav/>
+    <html lang="en" suppressHydrationWarning className={montserrat.className}>
+      <Provider>
+        <body>
+          <Nav />
           {children}
-          <Footer/>
-        </Providers>
-      </body>
+          <Footer />
+        </body>
+      </Provider>
     </html>
   );
 }
-
-

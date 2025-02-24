@@ -1,5 +1,6 @@
 // theme.ts
-import { extendTheme, ThemeConfig } from "@chakra-ui/react";
+import { extendTheme } from "@chakra-ui/react/extend-theme";
+import { ThemeConfig } from "@chakra-ui/theme";
 import "@fontsource/montserrat";
 import { color } from "framer-motion";
 

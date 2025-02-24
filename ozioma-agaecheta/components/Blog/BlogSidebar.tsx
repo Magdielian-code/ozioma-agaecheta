@@ -1,10 +1,9 @@
 import React from "react";
-import { 
-  GridItem, 
-  TabList, 
-  Tab, 
-  Divider 
+import {
+  GridItem,
 } from "@chakra-ui/react";
+import { Separator } from "@chakra-ui/react";
+import { Tabs} from "@chakra-ui/react";
 import OtherProjectsCard from "./OtherProjectsCard";
 
 const BlogSidebar: React.FC = () => {
@@ -21,8 +20,8 @@ const BlogSidebar: React.FC = () => {
   };
 
   const tabs = [
-    "Tech and Business", 
-    "Religion and Theology", 
+    "Tech and Business",
+    "Religion and Theology",
     "Lifestyle"
   ];
 
@@ -35,13 +34,13 @@ const BlogSidebar: React.FC = () => {
       css={{
         "&::-webkit-scrollbar": { width: "4px" },
         "&::-webkit-scrollbar-track": { width: "6px" },
-        "&::-webkit-scrollbar-thumb": { 
-          background: "#E7BC91", 
-          borderRadius: "24px" 
+        "&::-webkit-scrollbar-thumb": {
+          background: "#E7BC91",
+          borderRadius: "24px"
         },
       }}
     >
-      <TabList
+      <Tabs.List
         display="flex"
         justifyContent="flex-center"
         flexDirection="column"
@@ -52,10 +51,10 @@ const BlogSidebar: React.FC = () => {
             {tab}
           </Tab>
         ))}
-        
-        <Divider mt={4} color="white" />
+
+        <Separator mt={4} color="white" />
         <OtherProjectsCard />
-      </TabList>
+      </Tabs.List>
     </GridItem>
   );
 };
