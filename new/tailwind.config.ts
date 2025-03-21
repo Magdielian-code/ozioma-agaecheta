@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import { fontFamily } from "tailwindcss/defaultTheme";
 
 export default {
   content: [
@@ -12,6 +13,9 @@ export default {
         bg: "#1c1917",
         background: "var(--background)",
         foreground: "var(--foreground)",
+      },
+      fontFamily: {
+        sans: ["var(--font-montserrat)", ...fontFamily.sans],
       },
     },
   },

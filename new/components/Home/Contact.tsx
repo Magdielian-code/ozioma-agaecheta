@@ -27,7 +27,7 @@ const Contact = () => {
         </Text>
         <HStack mt={10}>
         <Input  width={{base:'sm'}} border={'2px solid white'} size={'lg'} borderColor='#E7BC91' placeholder='youremail@gmail.com' />
-        <Button backgroundColor='#E7BC91' color={'#000000'} size='lg'>Subscribe</Button>
+        <Button backgroundColor='#E7BC91' px={2} color={'#000000'} size='lg'>Subscribe</Button>
         </HStack>
       </Box>
     </Container>

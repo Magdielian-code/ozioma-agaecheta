@@ -8,7 +8,7 @@ import { Tabs } from "@chakra-ui/react";
 
 export default function Blog() {
   return (
-    <Container maxW={{ base: "2xl", md: "7xl" }} my={12}>
+    <Container maxW={{ base: "2xl", md: "7xl" }} my={20}>
       <Tabs.Root defaultValue={"0"} display="flex" height="100vh">
         <Grid templateColumns="0.7fr 2fr 0.6fr" gap={6} width="100%" pt={4}>
           <BlogSidebar />

@@ -3,16 +3,15 @@ import {
   GridItem,
 } from "@chakra-ui/react";
 import { Separator } from "@chakra-ui/react";
-import { Tabs} from "@chakra-ui/react";
+import { Tabs } from "@chakra-ui/react";
 import OtherProjectsCard from "./OtherProjectsCard";
 
 const BlogSidebar: React.FC = () => {
   const tabStyles = {
     color: "white",
     _selected: {
-      bg: "#E7BC91",
+      color: "#E7BC91",
       fontWeight: "bold",
-      color: "black",
     },
     px: 4,
     py: 3,

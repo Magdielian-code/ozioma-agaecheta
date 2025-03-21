@@ -36,6 +36,7 @@ export default function Nav() {
   return (
     <Box
       w={"100%"}
+      pt={4}
       top={0}
       zIndex={1000}
       bg={"#1c1917"}
@@ -48,11 +49,11 @@ export default function Nav() {
       <Container>
         <Box>
           <Flex align={"center"} display={{ base: "none", md: "flex" }}>
-            <Avatar.Root size="sm">
+            <Avatar.Root size="sm" border={"2px solid #E7BC91"}>
               <Avatar.Fallback
                 name="Ozioma Agaecheta"
                 display={{ base: "block", md: "none" }}
-                style={{ border: "2px solid #E7BC91" }}
+
               />
               <Avatar.Image src="/assets/me2.jpeg" />
             </Avatar.Root>
@@ -64,6 +65,7 @@ export default function Nav() {
                 <Link key={link.href} href={link.href}>
                   <Button
                     style={{ border: "none" }}
+                    p={2}
                     variant="outline"
                     bg={pathname === link.href ? "#E7BC91" : "transparent"}
                     fontWeight={pathname === link.href ? "bold" : "normal"}
@@ -91,10 +93,11 @@ export default function Nav() {
                         style={{
                           transition: "color 0.3s ease"
                         }}
-                        className={pathname === link.href ? "mr-[8px] bg-transparent text-black" : "mr-[8px] group-hover:bg-black text-[#E7BC91] group-hover:text-black"}
+                        className={pathname === link.href ? "mr-[4px] bg-transparent text-black" : "mr-[4px] group-hover:bg-black text-[#E7BC91] group-hover:text-black"}
                       />
                       <Text
                         as="span"
+                        pr={2}
                         color={pathname === link.href ? "black" : "white"}
                         fontWeight="light"
                         fontSize="sm"

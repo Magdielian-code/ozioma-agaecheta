@@ -16,6 +16,7 @@ export const metadata: Metadata = {
 
 const montserrat = Montserrat({
   subsets: ['latin'],
+  variable: '--font-montserrat',
 })
 
 export default function RootLayout({
@@ -24,8 +25,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning className={montserrat.className}>
-      <body className="bg-bg">
+    <html lang="en" suppressHydrationWarning className={`${montserrat.variable} ${montserrat.className}`}>
+       <body className={`${montserrat.className} bg-bg`}>
         <Provider>
           <Nav />
           {children}

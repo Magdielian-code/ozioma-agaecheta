@@ -4,7 +4,6 @@ import Hero from "@/components/Home/Hero";
 import Projects from "@/components/Home/Projects";
 import Skillset from "@/components/Home/Skillset";
 import Testimonials from "@/components/Home/Testimonials";
-import Image from "next/image";
 
 export default function Home() {
   return (

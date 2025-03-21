@@ -75,7 +75,7 @@ const Talks: React.FC = () => {
         </Text>
         <Flex align="center" mb={10} flexWrap={"wrap"} gap={3}>
           {topics.map((topic, index) => (
-            <Button key={index} size={"sm"} bg={"#292524"} _hover={{ bg: "#292524", color: "#E7BC91" }}>
+            <Button key={index} size={"sm"} px={2} bg={"#292524"} _hover={{ bg: "#292524", color: "#E7BC91" }}>
               {topic}
             </Button>
           ))}
