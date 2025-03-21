@@ -1,8 +1,7 @@
 "use client";
 import Container from "@/components/Container";
-import { Separator } from "@chakra-ui/react";
 import { Box, Flex, Text } from "@chakra-ui/react";
-import { socials } from "../../../ozioma-agaecheta/components/Utils/Socials";
+import { socials } from "../../../new/components/Utils/Socials";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
