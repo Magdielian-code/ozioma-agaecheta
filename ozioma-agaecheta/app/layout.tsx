@@ -1,4 +1,4 @@
-import { Nav } from "components/Home/Nav";
+import Nav from "components/Home/Nav";
 import Footer from "@/components/Home/Footer";
 import { Montserrat } from 'next/font/google'
 import type { Metadata } from "next";
